@@ -1,0 +1,161 @@
+﻿@page "/lifeplan"
+<h1>Life Planner</h1>
+
+<hr class="style2" />
+<h2>ファイル</h2>
+
+<!--<h2>Test versioin (No GUI)</h2>-->
+<p>
+    <input type="file" id="getfileCSV" accept=".csv">
+    <button id="importCSVButton" type="button" class="ui button">Import CSV</button>
+</p>
+
+<p>
+    <input type="file" id="getfile" accept=".json">
+    <button id="importButton" type="button" class="ui button">Import</button>
+    <button id="exportButton" type="button" class="ui button">Export</button>
+    <a id="download" target="_blank">Download</a>
+</p>
+
+<p>
+    入力ファイルはUTF-8フォーマット
+</p>
+<p>
+    <button id="templateButton" type="button" class="ui button">テンプレート読込</button>
+</p>
+
+<div class="ui raised segment">
+    <h2>
+        設定項目
+    </h2>
+
+    <p>
+        <div class="ui input">
+            <input type="text" id="estimateFrom" placeholder="Estimate from (Year)">
+        </div>
+        <select class="ui dropdown" name="selectEstimateFrom" id="selectEstimateFrom">
+            <option value="">Month</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </p>
+    <p>
+        <div class="ui input">
+            <input type="text" id="estimateTo" placeholder="Estimate until (Year)">
+        </div>
+        <!--<select class="ui dropdown" name="selectEstimateTo" id="selectEstimateTo">-->
+        <!--<option value="">Month</option>-->
+        <!--<option value="1">1</option>-->
+        <!--<option value="2">2</option>-->
+        <!--<option value="3">3</option>-->
+        <!--<option value="4">4</option>-->
+        <!--<option value="5">5</option>-->
+        <!--<option value="6">6</option>-->
+        <!--<option value="7">7</option>-->
+        <!--<option value="8">8</option>-->
+        <!--<option value="9">9</option>-->
+        <!--<option value="10">10</option>-->
+        <!--<option value="11">11</option>-->
+        <!--<option value="12">12</option>-->
+        <!--</select>-->
+    </p>
+    <div class="ui input">
+        <input type="text" id="initialSavings" placeholder="Initial Savings">
+    </div>
+    <button id="setGlobalParameterButton" type="button" class="ui button">Set</button>
+</div>
+
+<div class="ui raised segment">
+    <h2>
+        収支項目追加
+    </h2>
+    <p>
+        <div class="ui input">
+            <input type="text" id="addName" placeholder="Name">
+        </div>
+        <div class="ui input">
+            <input type="text" id="addBalance" placeholder="Balance">
+        </div>
+    </p>
+    <p>
+        <div class="ui input">
+            <input type="text" id="addBeginYear" placeholder="Begin Year">
+        </div>
+        <select class="ui dropdown" name="addBeginMonth" id="addBeginMonth">
+            <option value="">Month</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </p>
+    <p>
+        <div class="ui input">
+            <input type="text" id="addEndYear" placeholder="End Year">
+        </div>
+        <select class="ui dropdown" name="addEndMonth" id="addEndMonth">
+            <option value="">Month</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+    </p>
+    <button id="addButton" type="button" class="ui button">Add</button>
+</div>
+
+<div class="ui raised segment">
+
+    <h2>収支項目</h2>
+    <p>
+        <div id="inputTable" class="hot handsontable htRowHeaders htColumnHeaders"></div>
+    </p>
+
+    <p>
+        <button id="runButton" type="button" class="ui primary button">Run</button>
+    </p>
+</div>
+
+<div class="ui divider"></div>
+
+<div class="ui raised segment">
+    <h2>見積結果</h2>
+    <p>
+        <button id="exportResultButton" type="button" class="ui button">Export CSV</button>
+        <a id="downloadResultCSV" target="_blank">Download</a>
+    </p>
+
+    <!--<div id="example1" class="hot handsontable htRowHeaders htColumnHeaders" style="height: 800px; overflow: hidden; width: 1000px;" data-originalstyle="height: 800px; overflow: hidden; width: 1000px;"></div>-->
+    <div id="resultTable" class="hot handsontable htRowHeaders htColumnHeaders"></div>
+</div>
+
+
+@code {
+
+}

@@ -2,3 +2,5 @@
 blazor-wasm-sample/obj/
 
 blazor-wasm-sample/.vs/
+
+blazor-wasm-sample/bin/
